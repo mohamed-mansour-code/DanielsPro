@@ -1,0 +1,464 @@
+.dark{
+    --maincolor:#0078ff;
+    --paddingtb:60px 0px;
+    --icon:#000;
+}
+.light{
+    --maincolor:#fff;
+    --paddingtb:60px 0px;
+    --icon:#fff;
+}
+body{
+    background-color: #f5f5f5;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+/* <!-- ========== start navbar ========== --> */
+.navbar-brand{
+    font-size: 1.6rem;
+    line-height: 38px;
+    font-weight: 600;
+    color: var(--maincolor) ;
+}
+.nav-link{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    color: var(--maincolor) ;
+    cursor: pointer;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height: 3px;
+    width: 0;
+    background-color: var(--maincolor);
+    transition: .3s 0s all linear;
+}
+.nav-link:hover::after{
+    width: 50px;
+}
+.navbar-nav .active.nav-link::after{
+    width: 50px;
+}
+.transtion{
+    transition: .3s 0s all linear;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: var(--maincolor);
+}
+.nav-link:focus, .nav-link:hover{
+    color: var(--maincolor);
+}
+.navbar-toggler i{
+    color: var(--icon);
+}
+/* <!-- ========== end navbar ========== --> */
+
+/* <!-- ========== start header ========== --> */
+header{
+    background-image: url("../image/intro-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header .layer{
+    background-color: rgb(0 0 0 /.5);
+}
+header h1{
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+@media (max-width:768px) {
+    header h1{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+}
+header p{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+}
+header p::before{
+    content: "";
+    animation: max 7s linear 0s infinite normal;
+}
+
+@media (max-width:768px) {
+    header p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+/* <!-- ========== end header ========== --> */
+
+/* <!-- ========== start about ========== --> */
+.about{
+    padding: var(--paddingtb);
+}
+.about .content{
+    padding: 64px 48px;
+}
+@media (max-width:576px) {
+    .about .information ul{
+        padding-top: 20px;
+    }
+}
+.about .information li{
+    font-size: 1rem;
+    line-height: 24px;
+    color: #4e4e4e;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+.about .information li span{
+    font-size: 1.1rem;
+    line-height: 26px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+.about .content h2{
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 26px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+.about .content > div:last-child > h2::after{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 4px;
+    width: 100px;
+    background-color: var(--maincolor);
+}
+.about .content .skill div:nth-child(odd){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .content .skill div:nth-child(even){
+    position: relative;
+    margin: 5px 0;
+    width: 100%;
+    height: 10px;
+    background-color:#CDE1F8 ;
+}
+.about .content .skill div:nth-child(even):before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--maincolor);
+}
+.about .content .skill div:nth-child(2):before{
+    width: 85%;
+}
+.about .content .skill div:nth-child(4):before{
+    width: 75%;
+}
+.about .content .skill div:nth-child(6):before{
+    width: 50%;
+}
+.about .content .skill div:nth-child(8):before{
+    width: 90%;
+}
+.about .content .skill span{
+    font-size: 1rem;
+    line-height: 24px;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+
+@media (max-width:768px) {
+    .about .content > div:nth-child(2){
+        padding-top: 30px;
+    }   
+}
+.about .content div:last-child h2{
+    font-size: 2rem;
+    line-height: 38px;
+    color: #1e1e1e;
+    font-weight: 500;
+}
+.about .content div:last-child p{
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #4e4e4e;
+    font-weight: 300;
+}
+
+/* <!-- ========== end about ========== --> */
+.text{
+    text-align: center;
+}
+.text h2{
+    font-size: 3rem;
+    line-height: 58px;
+    color: #1e1e1e;
+    font-weight: 700;
+}
+.text p{
+    font-size: 1rem;
+    line-height: 24px;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+.text span{
+    display: block;
+    width: 100px;
+    height: 5px;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: var(--maincolor);
+}
+
+/* <!-- ========== start services ========== --> */
+.services{
+    padding: var(--paddingtb);
+}
+.services .content .box span{
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: .3s 0s all linear;
+}
+.services .content .box:hover span{
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+    color: white;
+}
+.services .content .box i{
+    font-size: 3rem;
+    
+}
+.services .content .box h3{
+    font-size: 1.5rem;
+    line-height: 24px;
+    color: #4e4e4e;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.services .content .box p{
+    font-size: 1rem;
+    line-height: 24px;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+/* <!-- ========== end services ========== --> */
+
+/* <!-- ========== start count ========== --> */
+.count{
+    background-image: url("../image/counters-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.count .layer{
+    background-color: rgb(0 120 225 /.3);
+    padding: var(--paddingtb);
+}
+.count .box{
+    margin: 20px 0;
+}
+.count .box span{
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px white;
+    margin: 0 auto;
+}
+.count .box h4{
+    font-size: 2rem;
+    line-height: 48px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.count .box p{
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 400;
+}
+/* <!-- ========== end count ========== --> */
+
+/* <!-- ========== start PORTFOLIO ========== --> */
+.portfolio{
+    padding: var(--paddingtb);
+}
+.portfolio .box-item span:first-child{
+    font-size: 1.2rem;
+    line-height: 23px;
+    color: #1e1e1e;
+    font-weight: 500;
+}
+.portfolio .box-item span:last-child{
+    font-size: .9rem;
+    line-height: 19px;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+.portfolio .box-item > span{
+    width: 40px;
+    height: 40px;
+
+}
+.portfolio img{
+    transition: .3s 0s all linear;
+}
+.portfolio .box:hover img{
+    transform: scale(1.1);
+}
+
+/* <!-- ========== end PORTFOLIO ========== --> */
+
+/* <!-- ========== start slide ========== --> */
+.slideitem{
+    background-image: url("../image/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.slideitem .layer{
+    padding: var(--paddingtb);
+    background-color: rgb(0 120 225 /.7);
+    height: 100%;
+}
+.slide .item-box .image{
+    width: 150px;
+    height: 150px;
+}
+.slide .item-box h3{
+    font-size: 1.2rem;
+    line-height: 34px;
+    font-weight: 600;
+}
+.slide .item-box p{
+    font-size: 1.1rem;
+    line-height: 30px;
+    font-weight: 300;
+}
+.slide .item-box span{
+    width: 50px;
+    height: 50px;
+}
+/* <!-- ========== end slide ========== --> */
+
+/* <!-- ========== start blog ========== --> */
+.blog{
+    padding: var(--paddingtb);
+}
+.blog .list-group-item .image{
+    width: 35px;
+    height: 35px;
+}
+.flaot{
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.blog .card-body a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: none;
+    color: black;
+    transition: .3s 0s all linear;
+}
+.blog .card-body a:hover{
+    color: var(--maincolor);
+}
+.blog .card-body p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: #4e4e4e;
+    padding-top: .5rem;
+}
+/* <!-- ========== end blog ========== --> */
+
+/* <!-- ========== start contact ========== --> */
+.contact{
+    background-image: url("../image/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.contact .layer{
+    padding-top: 60px;
+    background-color: rgb(0 120 225 /.7);
+}
+.contact .one h2,
+.contact .two h2{
+    position:relative;
+    font-size: 2rem;
+    line-height: 38px;
+    color: #1e1e1e;
+    font-weight: 500;
+}
+.contact h2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: var(--maincolor);
+}
+textarea{
+    height: 100px;
+}
+button{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 29px;
+}
+.contact .two p{
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #4e4e4e;
+    font-weight: 300;
+}
+.two li{
+    font-size: 1rem;
+    line-height: 32px;
+    color: #4e4e4e;
+    font-weight: 400; 
+}
+.social-media span{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 5px var(--maincolor);
+    cursor: pointer;
+}
+.social-media span:hover{
+    box-shadow: 0 0 0 5px #80bdff;
+    background-color: #0078ff;
+}
+.social-media span:hover i{
+    color: white;
+}
+/* <!-- ========== end contact ========== --> */
+
